@@ -7,8 +7,20 @@
 </ion-header>
 
 <ion-content>
-        <img class ="avatar" src="https://images.ecosia.org/zKpjPvxd6jhjA1YS7t-s_2c4XhQ=/0x390/smart/https%3A%2F%2Fi.pinimg.com%2F736x%2F68%2Fa7%2F05%2F68a705d2d4b8127d7d8adb8814b4f314--life-is-beautiful-holiday-destinations.jpg">
-    <div padding>
-        <ion-button size="large" expand="full" (click)="navToProfile()">Explore AirBnb</ion-button>
-      </div>
+    <ion-card>
+        <ion-card-content>
+          <p> Recently Visited </p>
+          <p> <b> Alabama, USA </b></p>
+          <p> <b> Capetown, South Africa </b></p>
+        </ion-card-content>
+      </ion-card>
+        <div class="row">
+        <div class="column">
+          <img src="https://images.ecosia.org/zKpjPvxd6jhjA1YS7t-s_2c4XhQ=/0x390/smart/https%3A%2F%2Fi.pinimg.com%2F736x%2F68%2Fa7%2F05%2F68a705d2d4b8127d7d8adb8814b4f314--life-is-beautiful-holiday-destinations.jpg" alt="Snow" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="https://images.ecosia.org/Io9-1d_wMX9iN9olM5l0COf9JnU=/0x390/smart/http%3A%2F%2Ffreshnist.com%2Fwp-content%2Fuploads%2F2013%2F03%2Fcool-house-designs-8.jpg" alt="Forest" style="width:100%">
+        </div>
+    </div>
+    <ion-button size="large" expand="full" (click)="navToProfile()">Explore AirBnb</ion-button>
 </ion-content>

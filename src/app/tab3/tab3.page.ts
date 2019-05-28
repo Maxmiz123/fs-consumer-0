@@ -15,6 +15,9 @@ export class Tab3Page {
   navToProfile() {
     this.navCtrl.navigateForward("tabs");
   }
-
+  
+  navToCapeTown() {
+    this.navCtrl.navigateForward ("capetown")
+  }
 }
 
