@@ -25,5 +25,15 @@
           <p> <b> Most Recent Trip </b> Alabama </p>
         </ion-card-content>
   </ion-card>
+  <ion-card>
+      <ion-card-content>
+        <p style ="font-size: 20px"> <b> Payment Information</b></p>
+        <div *ngFor= 'let payment of payments'>
+            {{payment.card_number}}
+          </div>
+          <p> <b> Average Review </b> 4.56/5 </p>
+          <p> <b> Most Recent Trip </b> Alabama </p>
+      </ion-card-content>
+</ion-card>
   <ion-button size="large" expand="full" (click)="navToLogin()">Logout</ion-button>
 </ion-content>
