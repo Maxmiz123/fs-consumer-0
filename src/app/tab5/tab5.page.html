@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title> Profile </ion-title>
+    <ion-title style="text-align: center"> Profile </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -8,39 +8,22 @@
     <ion-avatar class ="avatar">
         <img src="https://scontent.fopo2-1.fna.fbcdn.net/v/t1.0-9/50323519_1502749363201950_6804091407981084672_n.jpg?_nc_cat=102&_nc_ht=scontent.fopo2-1.fna&oh=1a078ebe348b500d16d239b58a095063&oe=5D5A9618">
     </ion-avatar>
-      <ion-list>
-        <ion-item>
-          <ion-label>Date of Birth</ion-label>
-          <ion-datetime
-            disabled
-            displayFormat="MM/DD/YYYY"
-            [(ngModel)]="myDateOfBirth"
-          ></ion-datetime>
-        </ion-item>
-      
-        <ion-item>
-          <ion-label>Place of Birth</ion-label>
-          New York, USA
-        </ion-item>
-  
-        <ion-item>
-          <ion-label>University</ion-label>
-          Princeton University
-        </ion-item>
-  
-        <ion-item>
-          <ion-label>Major</ion-label>
-          Economics, Finance
-        </ion-item>
-
-        <ion-item>
-          <ion-label>Number of Bookings</ion-label>
-          45
-        </ion-item>
-
-        <ion-item>
-          <ion-label>Number of reviews received</ion-label>
-          37  
-        </ion-item>
-      </ion-list>
+      <ion-card>
+          <ion-card-content>
+            <p style ="font-size: 20px"> <b> Max Misrahi</b></p>
+            <p> <b> Date of Birth: </b> 28/10/1999 </p> 
+            <p> <b> Place of Birth </b> New York, USA </p>
+            <p> <b> Residency </b> United Kingdom </p>
+            <p> <b> Most Recent Review: </b> George was an amazing guest. He, and his group, were very respectful of my home. They treated it with great care, and they are great people. Hopefully I see them soon! </p>
+          </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-content>
+          <p style ="font-size: 20px"> <b> AirBnb Stats</b></p>
+          <p> <b> Number of Bookings: </b> 45 </p> 
+          <p> <b> Average Review </b> 4.56/5 </p>
+          <p> <b> Most Recent Trip </b> Alabama </p>
+        </ion-card-content>
+  </ion-card>
+  <ion-button size="large" expand="full" (click)="navToLogin()">Logout</ion-button>
 </ion-content>

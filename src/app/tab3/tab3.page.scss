@@ -7,3 +7,9 @@
     width: 50%;
     padding: 5px;
   }
+.grid {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
+    grid-auto-rows: 550px;
+}

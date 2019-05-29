@@ -2,5 +2,14 @@
     margin: auto;
     padding-top: 20px;
     width: 100% !important;
-    height: 100% !important;
+    height: 65% !important;
+}
+.grid {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
+    grid-auto-rows: 550px;
+}
+ion-card-content {
+    height: 100%;
 }
