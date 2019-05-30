@@ -30,4 +30,8 @@ export class Tab5Page implements OnInit {
     this.navCtrl.navigateForward('');
   }
 
+  navToCheckout () {
+    this.navCtrl.navigateForward ('checkout')
+  }
+
 }
