@@ -28,11 +28,30 @@
   <ion-card>
       <ion-card-content>
         <p style ="font-size: 20px"> <b> Payment Information</b></p>
-        <div *ngFor= 'let payment of payments'>
+      
+      <ion-list>
+        
+        <ion-item
+        *ngFor='let payment of payments'>
             {{payment.card_number}}
-          </div>
-          <p> <b> Average Review </b> 4.56/5 </p>
-          <p> <b> Most Recent Trip </b> Alabama </p>
+        </ion-item>
+        
+        <ion-item
+          *ngFor='let payment of payments'>
+            {{payment.name_on_card}}
+        </ion-item>
+        
+        <ion-item
+            *ngFor='let payment of payments'>
+              {{payment.expiration_date}}
+        </ion-item>
+        
+        <ion-item
+          *ngFor= 'let payment of payments'>
+          {{payment.security_code}}
+        </ion-item>
+     
+      </ion-list>
       </ion-card-content>
 </ion-card>
   <ion-button size="large" expand="full" (click)="navToLogin()">Logout</ion-button>
