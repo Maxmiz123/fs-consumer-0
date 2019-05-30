@@ -2,35 +2,30 @@
     <ion-card>
         <ion-card-title style="margin: 10px"> Trips</ion-card-title>
         <p style ="margin: 15px"><b> Upcoming Trips</b></p>
-        <p style="margin: 20px"> You have no upcoming trips ;(</p>
-        <ion-button style ="margin: 5px 10px" size="small" (click)="navToProfile()">Explore AirBnb</ion-button>
+        <p style="margin: 10px 20px"> You have no upcoming trips ;(</p>
+        <ion-button style ="margin: 10px 10px" size="small" (click)="navToProfile()">Explore AirBnb</ion-button>
       </ion-card>
-    <div padding></div>
+    
+      <div padding></div>
   
     <p style = "margin: 0 10px; font-size: 20px; color:gray"> <b> <i> Most Recent Trips </i> </b></p>
     
-    <ion-list class = "grid">
+  <ion-list class = "grid">
     <ion-card>
-        <ion-card-content>
-          <p style ="font-size: 20px"> <b> Alabama, USA </b></p>
-          <p> <b> Name: </b> La Casa de Pablo. </p> 
-          <p> <b> Cost: </b> $3000 a week </p>
-          <p> <b> Date: </b> 12/05 - 27/05 </p>
-          <p> <b> Rating </b> 4.5/5 </p>
-          <p> <b> Landlord's Review: </b> George was an amazing guest. He, and his group, were very respectful of my home. They treated it with great care, and they are great people. Hopefully I see them soon! </p>
-          <img class = "avatar" src = "https://images.ecosia.org/bg2b7ElotUxb_Fcw8o-aJ8dlgjc=/0x390/smart/https%3A%2F%2Fbestofhouse.net%2Fwp-content%2Fuploads%2Fwest-mobile-alabama-homes-sale_127263.jpg">    
-        </ion-card-content>
-      </ion-card>  
-    <ion-card>
-          <ion-card-content>
-            <p style ="font-size: 20px"> <b> London, England</b></p>
-            <p> <b> Name: </b> Buckingham Palace </p> 
-            <p> <b> Cost: </b> $1,000,000 a week </p>
-            <p> <b> Date: </b> 24/08 - 28/08 </p>
-            <p> <b> Rating </b> ?/5 </p>
-            <p> <b> Landlord's Review: </b> As the queen, I don't really let too many people visit me here. But I was bored. Needed someone to speak to. George was an incredible friend. I love him; he is always welcome here! </p>
-            <img class = "avatar" src = "https://images.ecosia.org/K8DJjGC9l7BezCtFSMFNtqzvkZk=/0x390/smart/https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F1%2F13%2FBuckingham_Palace_from_gardens%252C_London%252C_UK_-_Diliff_%2528cropped%2529.jpg%2F1200px-Buckingham_Palace_from_gardens%252C_London%252C_UK_-_Diliff_%2528cropped%2529.jpg">    
-          </ion-card-content>
-        </ion-card> 
-      </ion-list> 
+      <ion-card-content>
+          <ion-item 
+          *ngFor="let property of properties"
+          (click)="navToProperty(property)">
+          {{property.name}}
+          {{property.city}}
+          {{property.cost}} 
+          {{property.rating}} 
+          {{property.date}}
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+  
+    <ion-button size="large" (click)="navToProfile()" expand="block">Explore our Recommendations</ion-button>
 </ion-content>
+

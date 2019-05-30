@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 
-import { Payment } from '../models /payment'
+import { Payment } from '../models/payment'
 
 @Component({ 
   selector: 'app-tab5',
