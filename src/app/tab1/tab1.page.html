@@ -6,12 +6,25 @@
         <ion-card-subtitle style ="margin: 0px 10px"> Let's go on a journey together! </ion-card-subtitle>
         <ion-card-content>
         <ion-list>
-          <ion-item>
-            Where?   <input  style="padding-left: 5px" type="text" placeholder="New York, USA" required>
+          <ion-item> 
+            <ion-label> Where? </ion-label>
+           <form placeholder = "New York, USA" action ="/action_page.php">
+              <select name ="numGuestsRange">
+                <option value ="Not entered">---</option>
+                <option value="2-4" > New York, USA </option>
+                <option value="2-4" > London, England </option>
+                <option value="2-4" > Lech, Austria </option>
+                <option value="2-4" > Lack Como, Italy </option>
+                <option value="2-4" > Washington DC, USA </option>
+                <option value="2-4" > Bogota, Colombia </option>
+              </select>
+            </form>
           </ion-item>
           <ion-item>
             <ion-label>
-             People:   <form style ="text-align: right" action ="/action_page.php">
+             People:
+            </ion-label>   
+            <form style ="text-align: right" style="text-align: right" action ="/action_page.php">
               <select name ="numGuestsRange">
                 <option value ="Not entered">---</option>
                 <option value="2-4" > 1 </option>
@@ -22,7 +35,7 @@
                 <option value="2-4" > 10-12 </option>
               </select>
             </form>
-          </ion-label>
+          
             </ion-item>
             <ion-item>
             <ion-label>From: </ion-label>

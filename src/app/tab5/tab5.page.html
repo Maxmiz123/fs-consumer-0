@@ -33,26 +33,26 @@
         
         <ion-item
         *ngFor='let payment of payments'>
-            {{payment.card_number}}
+            Card Number: {{payment.card_number}}
         </ion-item>
         
         <ion-item
           *ngFor='let payment of payments'>
-            {{payment.name_on_card}}
+            Name on card: {{payment.name_on_card}}
         </ion-item>
         
         <ion-item
             *ngFor='let payment of payments'>
-              {{payment.expiration_date}}
+              Expiration Date: {{payment.expiration_date}}
         </ion-item>
         
         <ion-item
           *ngFor= 'let payment of payments'>
-          {{payment.security_code}}
+          Security Code: {{payment.security_code}}
         </ion-item>
      
       </ion-list>
-      <ion-button size = "small" (click) ="navToCheckout()" > Enter Payment Details</ion-button>
+      <ion-button size = "small" (click) ="navToCheckout()" > Update Payment Details</ion-button>
       </ion-card-content>
 </ion-card>
   <ion-button size="large" expand="full" (click)="navToLogin()">Logout</ion-button>

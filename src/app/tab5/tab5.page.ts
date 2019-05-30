@@ -15,10 +15,10 @@ export class Tab5Page implements OnInit {
     private navCtrl: NavController
   ) { 
     let payment1 = new Payment();
-    payment1.card_number = "xxxx-xxxx-xxxx";
-    payment1.name_on_card = "Name on Card"
-    payment1.expiration_date="MM/YY"
-    payment1.security_code = "xxx"
+    payment1.card_number = "4575-5656-7788";
+    payment1.name_on_card = "Max Misrahi"
+    payment1.expiration_date="05/22"
+    payment1.security_code = "778"
 
     this.payments.push(payment1);
   }
@@ -31,7 +31,11 @@ export class Tab5Page implements OnInit {
   }
 
   navToCheckout () {
-    this.navCtrl.navigateForward ('checkout')
+    this.navCtrl.navigateForward ('checkout');
+  }
+
+  navToLogin() {
+    this.navCtrl.navigateForward ('');
   }
 
 }
