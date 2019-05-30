@@ -5,26 +5,51 @@
 </ion-header>
 
 <ion-content>
-      <ion-grid>
-        <ion-row justify-content-center>
-          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-            <div text-center>
-              <h4>Login Form</h4>
-            </div>
-            <div padding>
-              <ion-item>
-                <ion-input type="text" placeholder="Username"></ion-input>
-              </ion-item>
-      
-              <ion-item>
-                <ion-input type="password" placeholder="Password"></ion-input>
-              </ion-item>
+    <ion-card><div class="container">
+        <form action="/action_page.php">
+          <div class="row">
+            <h2 style="text-align:center">Login with Social Media or Manually</h2>
+            <div class="vl">
             </div>
       
-            <div padding>
-              <ion-button size="large" (click)="navToProfile()" expand="block">Login</ion-button>
+            <div class="col">
+              <a href="#" class="fb btn">
+                <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+              </a>
+              <a href="#" class="twitter btn">
+                <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+              </a>
+              <a href="#" class="google btn">
+                <i class="fa fa-google fa-fw"></i> Login with Google+
+              </a>
             </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>   
+      
+            <div class="col">
+              <div class="hide-md-lg">
+                <p>Or sign in manually:</p>
+              </div>
+      
+              <input type="text" name="username" placeholder="Username" required>
+              <input type="password" name="password" placeholder="Password" required>
+              <ion-button size="medium" expand="full" (click)="navToProfile()">Login</ion-button>
+            </div>
+      
+          </div>
+        </form>
+      </div>
+    
+      
+      <div class="bottom-container">
+        <div class="row">
+          <div class="col">
+            <ion-button size="small" expand="full" (click)="navToSignup()">SignUp</ion-button>
+          </div>
+          <div class="col">
+            <ion-button size="small" expand ="full" (click)="navToSignup()" >Forgot password?</ion-button>
+          </div>
+        </div>
+      </div>
+
+      <br> 
+    </ion-card>
 </ion-content>

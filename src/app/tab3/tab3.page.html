@@ -12,19 +12,15 @@
     <p style = "margin: 0 10px; font-size: 20px; color:gray"> <b> <i> Most Recent Trips </i> </b></p>
     
   <ion-list class = "grid">
-    <ion-card>
-      <ion-card-content>
-          <ion-item 
+          <ion-card
           *ngFor="let property of properties"
           (click)="navToProperty(property)">
-          {{property.name}}
-          {{property.city}}
-          {{property.cost}} 
-          {{property.rating}} 
-          {{property.date}}
-        </ion-item>
-      </ion-card-content>
-    </ion-card>
+          <ion-card-subtitle class = "details">Property Name: <b> {{property.name}} </b> </ion-card-subtitle>
+          <ion-card-subtitle class = "details">City: <b> {{property.city}} </b> </ion-card-subtitle>
+          <ion-card-subtitle class = "details" >Cost: <b>{{property.cost}} </b> </ion-card-subtitle>
+          <ion-card-subtitle class = "details" >Rating: <b>{{property.rating}} </b> </ion-card-subtitle>
+          <ion-card-subtitle class = "details">Date: <b>{{property.date}} </b> </ion-card-subtitle>
+        </ion-card>
   </ion-list>
     <ion-button size="large" (click)="navToProfile()" expand="block">Explore our Recommendations</ion-button>
 </ion-content>

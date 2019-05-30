@@ -18,5 +18,8 @@ export class LoginPage implements OnInit {
   navToProfile() {
     this.navCtrl.navigateForward('tabs');
   }
+  navToSignup() {
+    this.navCtrl.navigateForward('signup');
+  }
 
 }
